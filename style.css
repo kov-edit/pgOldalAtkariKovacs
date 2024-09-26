@@ -3,11 +3,54 @@
     box-sizing: border-box; /*lehet elront valamit*/
   }
   
+
+#fejlecdiv{
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 40%;
+  background-color: #011A76;
+  color: aliceblue;
+  border-bottom: 20px solid #B78C0A; /*arany csík*/
+}
+
+#logo{
+  
+  display: inline-block;
+  width: 25%;
+  padding: 10px;
+  
+  text-align: center;
+
+
+}
+
+#pg{
+   display: inline-block;
+   width: 50%;
+   text-align: center;
+   margin: auto;
+
+   font-size: 35px;
+   color:#d4c091;
+}
+
+@media screen and (max-width: 600px) {
+  #logo, #pg {
+    width: 100%;
+  }
+}
+
+
+
+
+
   
   
   body{
     margin: auto;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
 
@@ -79,14 +122,42 @@
 
 /*főoldal*/  
   .content{
-    background-color: #cfcfc5;
-    box-shadow: 1px 1px 39px -3px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 1px 39px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 39px -3px rgba(0,0,0,0.75);
+    background-color: #fff;
     margin: auto;
     width: 100%;
     padding: 10px;
+    border-bottom: 20px solid #B78C0A;
   }
+
+
+  .row {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .columns {
+    width: 30%;
+    height: 300px; /*nem kell alapból*/
+    min-width: 280px;
+    vertical-align: top;
+    margin-bottom: 10px;
+    display: inline-block;
+   }
+
+  .align-right {
+    text-align: right;
+  }
+
+  @media screen and (max-width: 680px) {
+    .columns {
+      width: 100%; 
+    }
+  }
+
+
+
+
+
 
 /*slideshow*/
 .mySlides {display: none}
@@ -238,7 +309,7 @@ footer {
   }
   
   #pdiv a:hover{
-    background: -webkit-linear-gradient(#c1a35c, #9fa3b5);
+    background: #c1a35c, ;
     border-radius: 80%;
     border: transparent;
     text-decoration: none;
