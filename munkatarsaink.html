@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PG oldal nagyon fasza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     
@@ -41,12 +42,43 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       padding: 16px;
       text-align: center;
-      background-color: #f1f1f1;
+      background-color: lightblue;
+      position: relative;
     }
 
     .kepek {
+      display: block;
       width: 100%;
+      height: auto;
     }
+
+    .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: beige;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.card:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
     </style>
 <body>
   <div class="topnav" id="myTopnav">
@@ -70,7 +102,9 @@
     <div class="card">
       <img src="image.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
 
@@ -78,7 +112,9 @@
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
   
@@ -86,7 +122,9 @@
     <div class="card">
       <img src="image.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
   
@@ -94,7 +132,9 @@
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
 
@@ -102,7 +142,9 @@
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
 </div>
@@ -114,7 +156,9 @@
     <div class="card">
       <img src="image.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
 
@@ -122,7 +166,9 @@
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
   
@@ -130,7 +176,9 @@
     <div class="card">
       <img src="image.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
   
@@ -138,14 +186,18 @@
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
   <div class="column">
     <div class="card">
       <img src="image1.jpg" alt="" class="kepek">
       <p>név</p>
-      <p>tárgy</p>
+      <div class="overlay">
+        <div class="text">tantárgy</div>
+      </div>
     </div>
   </div>
 </div>
@@ -160,11 +212,13 @@
             </ul>
         </div>
         <div id="pdiv">
-            <p>
-                <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
-                <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
-            </p>
-        </div>
+          <p>
+            <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
+            <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
+            <a href="https://www.facebook.com/people/Kiskunf%C3%A9legyh%C3%A1zi-Szent-Benedek-PG-K%C3%A9t-Tan%C3%ADt%C3%A1si-Nyelv%C5%B1-Technikum-%C3%A9s-Koll/100032786691974/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/channel/UCsHOTZXcaLiIPJ_sXhJW0zA" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/pg_kiskunfelegyhaza/" target="_blank" class="fa fa-instagram"></a>
+          </p>
        <p style="text-align: center; color: beige; bottom:0px; right:50%; position: absolute; margin: auto;padding: 50px 0px 15px 0px;"> &copy; 2023 PG</p>
     </div>
 </footer>
