@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
+
+<!--Semmi nem működik-->
+
     <style>
         .row > .column {
           padding: 0 8px;
@@ -126,6 +131,23 @@
         </style>
 </head>
 <body>
+
+  <div class="topnav" id="myTopnav">
+
+    <a href="index.html" class="active">Főoldal</a>
+    <a href="elerhetosegek.html">Elérhetőségek</a>
+    <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
+    <a href="dokumentumok.html" class="split">Dokumentumok</a>     
+    <a href="" class="split">Gyerekvédelem</a>       
+    <a href="buszkesegeink.html" class="split">Büszkeségeink</a>               
+    <a href="galeriatemplate.html" class="split">Galéria</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i> <!--nem tudok neki színt adni és nem látszódik de működik-->
+    </a>
+</div>
+
+
+
     
         <!-- Change Your Title here -->
         <h2 style="text-align: center;">Image Gallery</h2>
@@ -173,14 +195,14 @@
         <p id="caption"></p>
         </div>
         <!-- Change Your Image title Link alt text to show bellow-->
-        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(1)" alt="Your Title of image 1" /></div>
-        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(2)" alt="Your Title of image 2" /></div>
-        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(3)" alt="Your Title of image 3" /></div>
-        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(4)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(5)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(6)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(7)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(8)" alt="Your Title of image 4" /></div>
+        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(1)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(2)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(3)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(4)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(5)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(6)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image.jpg" style="width: 100%;" onclick="currentSlide(7)" alt=" " /></div>
+        <div class="column"><img class="demo cursor" src="image1.jpg" style="width: 100%;" onclick="currentSlide(8)" alt=" " /></div>
         </div>
     <!-- Change Your Image title Link -->
         </div>
@@ -188,58 +210,76 @@
         
     <div class="row">
         <!-- Change Your Button Tittle -->
-        <div class="column"><button style="width: 100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">Image two</button></div>
+        <div class="column"><button style="width: 100%;" onclick="openModal1();currentSlide(1)" class="hover-shadow cursor"><img src="image3.jpg" alt="">Image two</button></div>
         </div>
-        <div id="myModal" class="modal"><span class="close cursor" onclick="closeModal()">×</span>
+        <div id="myModal" class="modal"><span class="close cursor" onclick="closeModal1()">×</span>
         <div class="modal-content">
-        <div class="mySlides">
+        <div class="mySlides1">
         <!-- Change Your Image title Link -->
         <div class="numbertext">1 / 4</div>
         <img src="image2.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
         <!-- Change Your Image title Link -->
         <div class="numbertext">2 / 4</div>
         <img src="image3.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
         <!-- Change Your Image title Link -->
         <div class="numbertext">3 / 4</div>
         <img src="image2.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
                     <!-- Change Your Image title Link -->
         <div class="numbertext">3 / 4</div>
         <img src="image3.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
                     <!-- Change Your Image title Link -->
         <div class="numbertext">3 / 4</div>
         <img src="image2.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
                     <!-- Change Your Image title Link -->
         <div class="numbertext">3 / 4</div>
         <img src="image3.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
                     <!-- Change Your Image title Link -->
         <div class="numbertext">3 / 4</div>
         <img src="image2.jpg" style="width: 100%;" /></div>
-        <div class="mySlides">
+        <div class="mySlides1">
         <!-- Change Your Image title Link -->
         <div class="numbertext">4 / 4</div>
         <img src="image3.jpg" style="width: 100%;" /></div>
         <a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next" onclick="plusSlides(1)">❯</a>
         <div class="caption-container">
-        <p id="caption"></p>
+        <p id="caption1"></p>
         </div>
         <!-- Change Your Image title Link alt text to show bellow-->
-        <div class="column"><img class="demo cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(1)" alt="Your Title of image 1" /></div>
-        <div class="column"><img class="demo cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(2)" alt="Your Title of image 2" /></div>
-        <div class="column"><img class="demo cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(3)" alt="Your Title of image 3" /></div>
-        <div class="column"><img class="demo cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(4)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(5)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(6)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(7)" alt="Your Title of image 4" /></div>
-        <div class="column"><img class="demo cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(8)" alt="Your Title of image 4" /></div>
+        <div class="column"><img class=" demo1 cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(1)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(2)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(3)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(4)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(5)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(6)" alt=" " /></div>
+        <div class="column"><img class=" demo1 cursor" src="image2.jpg" style="width: 100%;" onclick="currentSlide(7)" alt=" " /></div>
+        <div class="column"><img class="  demo1 cursor" src="image3.jpg" style="width: 100%;" onclick="currentSlide(8)" alt=" " /></div>
         </div>
     <!-- Change Your Image title Link -->
         </div>
+
+
+        <footer>
+          <div id="footerdiv">
+              <div id="uldiv">
+                  <ul id="lablec">  
+                      <a href="https://pg150.hu/gdpr.html" target="_blank"><li>Adatkezelési tájékoztató</li></a>
+                  </ul>
+              </div>
+              <div id="pdiv">
+                  <p>
+                      <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
+                      <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
+              </div>
+             <p style="text-align: center; color: beige; bottom:0px; right:50%; position: absolute; margin: auto;padding: 50px 0px 15px 0px;"> &copy; 2024 PG</p>
+          </div>
+      </footer>
+
 
         <script>
             /**
@@ -284,6 +324,46 @@
           dots[slideIndex-1].className += " active";
           captionText.innerHTML = dots[slideIndex-1].alt;
         }
+
+
+
+        function openModal1() {
+          document.getElementById("myModal1").style.display = "block";
+        }
+        
+        function closeModal1() {
+          document.getElementById("myModal1").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides1(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides1(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides1(slideIndex = n);
+        }
+        
+        function showSlides1(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides1");
+          var dots = document.getElementsByClassName("demo1");
+          var captionText = document.getElementById("caption1");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        
         </script>
 </body>
 </html>
