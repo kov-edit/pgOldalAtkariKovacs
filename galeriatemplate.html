@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Galéria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Document</title>
+
 
 <!--NEM LINKEK A MENÜ DOLGAI DE A FOOTER IGEN
 GÖRGETNI SE LEHET AZ OLDALON (lehet hogy csak velem van a baj)
@@ -300,7 +301,7 @@ body {
 	 right: 0;
 	 bottom: 0;
 	 left: 0;
-	 background: yellow;
+	 background: wheat;
 	 opacity: 0;
 	 transform: scale(1.2);
 	 transition: none;
@@ -312,7 +313,7 @@ body {
 	 left: 0;
 	 right: 0;
 	 top: 0;
-	 background-color: green;
+	 background-color: #011A76;
 	 padding-bottom: 5rem;
 }
  .Gallery-close {
@@ -364,7 +365,7 @@ body {
 	 width: 15rem;
 	 height: 9.5rem;
 	 transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
-	 background: red;
+	 background: #B78C0A;
 	 background-size: auto 100%;
 	 background-position: center;
 	 background-repeat: no-repeat;
@@ -376,13 +377,14 @@ body {
 }
  .Gallery--active {
 	 z-index: 100;
-	 background: blue;
+	 background: #031041b9;
 	 transform: scale(1);
 	 opacity: 1;
 	 transition: all 0.5s cubic-bezier(0.7, 0, 0.78, 1) 0.1s;
 }
  .Gallery--active .Gallery-close {
 	 display: block;
+     color: white;
 }
  .Gallery--active .Gallery-images {
 	 opacity: 1;
@@ -393,18 +395,27 @@ body {
 </head>
 <body>
 
+    <div id="fejlecdiv">
+        <div id="logo">
+          <img src="pglogo.png" alt="" width="200px" style="padding: 10px;">
+        </div>
+        
+        <div id="pg">
+          <p >KISKUNFÉLEGYHÁZI SZENT BENEDEK PG KÉT TANÍTÁSI NYELVŰ TECHNIKUM ÉS KOLLÉGIUM</p>
+        </div>
+        
+
+    </div>
+
     <div class="topnav" id="myTopnav">
 
-        <a href="index.html">Főoldal</a>
-        
-          <a href="elerhetosegek.html">Elérhetőségek</a>
-          <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
-          <a href="dokumentumok.html" class="split">Dokumentumok</a>     
-          <a href="" class="split">Gyerekvédelem</a>       
-          <a href="" class="split">Büszkeségeink</a>               
-          <a href="galeria.html" class="split">Galéria</a>
-        
-
+        <a href="index.html" class="active">Főoldal</a>
+        <a href="elerhetosegek.html">Elérhetőségek</a>
+        <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
+        <a href="dokumentumok.html" class="split">Dokumentumok</a>     
+        <a href="" class="split">Gyerekvédelem</a>       
+        <a href="" class="split">Büszkeségeink</a>               
+        <a href="galeriatemplate.html" class="split">Galéria</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -468,7 +479,7 @@ body {
               <div class="Card-shadow"></div>
               <div class="Card-image" style="background-image: url(image1.jpg)"></div>
           </div>
-          <div class="Card-title"><span>Veni Sante</span></div>
+          <div class="Card-title"><span>Veni Sancte</span></div>
           <div class="Card-explore"><span>További képek</span></div><button class="Card-button">Tovább</button></a>
   </div>
   

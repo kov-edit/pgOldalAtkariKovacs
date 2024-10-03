@@ -4,36 +4,39 @@
 }
 
 
+body{
+  margin: auto;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
 #fejlecdiv{
 box-sizing: border-box;
-
 width: 100%;
-height: 40%;
 background-color: #011A76;
 color: aliceblue;
 border-bottom: 20px solid #B78C0A; /*arany csík*/
+padding: auto;
+vertical-align: auto;
 }
 
 #logo{
-
 display: inline-block;
 width: 25%;
 padding: 10px;
-
 text-align: center;
-
-
 }
 
-#pg{
+
+#pg{ /*Suli név*/
  display: inline-block;
  width: 50%;
  text-align: center;
- margin: auto;
-
- font-size: 35px;
+padding: auto;
+ font-size: 45px;
  color:#d4c091;
 }
+
 
 @media screen and (max-width: 600px) {
 #logo, #pg {
@@ -47,11 +50,6 @@ text-align: center;
 
 
 
-body{
-  margin: auto;
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
 
 
 /*menu*/
@@ -130,6 +128,10 @@ body{
   border-bottom: 20px solid #B78C0A;
 }
 
+#keplinkek :hover{
+  opacity: 0.9;
+  
+}
 
 .row {
   width: 100%;
@@ -244,15 +246,15 @@ footer {
   text-decoration: none; 
   padding:  10px;
   margin: 5px;
+  color: #d4c091;
 
 }
 
 #pdiv a:hover{
-  background: #c1a35c, ;
   border-radius: 80%;
   border: transparent;
   text-decoration: none;
-  color: black;
+  color: #c1a35c;
 }
 
 #uldiv a:hover {
