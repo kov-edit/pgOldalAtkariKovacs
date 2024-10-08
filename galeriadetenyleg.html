@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG oldal nagyon fasza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 1020px) {
+            .navbar a:not(:first-child), .dropdown .dropbtn {display: none;}
+            .navbar a.icon {
+            float: right;
+            display: block;
+            }
+        }
+
+@media screen and (max-width: 1020px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+        
+        
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        </style>
+</head>
+<body>
+    <div id="fejlecdiv">
+        <div id="logo" style=" height: 230px">
+          <img src="pglogo.png" alt="" width="200px" style="padding-top: 30px;">
+        </div>
+        
+        <div id="pg" style=" height: 230px">
+          <p >KISKUNFÉLEGYHÁZI SZENT BENEDEK PG KÉT TANÍTÁSI NYELVŰ TECHNIKUM ÉS KOLLÉGIUM</p>
+        </div>
+        
+
+    </div>
+
+    <div class="topnav" id="myTopnav">
+
+        <a href="index.html" class="active">Főoldal</a>
+        <a href="elerhetosegek.html">Elérhetőségek</a>
+        <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
+        <a href="dokumentumok.html" class="split">Dokumentumok</a>     
+        <a href="" class="split">Gyerekvédelem</a>       
+        <a href="" class="split">Büszkeségeink</a>
+        <div class="dropdown">      
+            <button class="dropbtn">Galéria
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">2024</a>
+                <a href="#">2023</a>
+                <a href="#">2022</a>
+            </div>
+        </div> 
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i> 
+        </a>
+    </div>
+
+
+
+
+
+    <div class="navbar" id="navbar">
+        <a href="index.html" class="active">Főoldal</a>
+        <a href="elerhetosegek.html">Elérhetőségek</a>
+        <div class="dropdown">      
+            <button class="dropbtn">Galéria
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">2024</a>
+                <a href="#">2023</a>
+                <a href="#">2022</a>
+            </div>
+        </div> 
+        <a href="munkatarsaink.html">Munkatársaink</a>     
+        <a href="dokumentumok.html">Dokumentumok</a>     
+        <a href="">Gyerekvédelem</a>       
+        <a href="">Büszkeségeink</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
+          <i class="fa fa-bars"></i> 
+        </a>
+    </div>
+
+
+
+    <button onclick="myFunction3()">2024</button>
+    <button onclick="myFunction4()">2023</button>
+    <button onclick="myFunction5()">2022</button>
+    <button onclick="myFunction6()">2021</button>
+    <button onclick="myFunction7()">2020</button>
+
+    <div class="content">
+        <div id="myDIV1" style="display: none;">
+            This is my DIV element. Click to hide.
+        </div>
+        <div id="myDIV2" style="display: none;">
+            This is my DIV element. Click to hide.
+        </div>
+        <div id="myDIV3" style="display: none;">
+            This is my DIV element. Click to hide.
+        </div>
+        <div id="myDIV4" style="display: none;">
+            This is my DIV element. Click to hide.
+        </div>
+        <div id="myDIV5" style="display: none;">
+            This is my DIV element. Click to hide.
+        </div>
+    </div>
+
+
+
+<script>
+    function myFunction3() {
+      var x = document.getElementById("myDIV1");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction4() {
+      var x = document.getElementById("myDIV2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction5() {
+      var x = document.getElementById("myDIV3");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction6() {
+      var x = document.getElementById("myDIV4");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function myFunction7() {
+      var x = document.getElementById("myDIV5");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+
+    <footer>
+        <div id="footerdiv">
+          <div id="uldiv">
+              <ul id="lablec">  
+                  <a href="https://pg150.hu/gdpr.html" target="_blank"><li>Adatkezelési tájékoztató</li></a>
+              </ul>
+          </div>
+          <div id="pdiv">
+              <p>
+                <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
+                <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
+                <a href="https://www.facebook.com/people/Kiskunf%C3%A9legyh%C3%A1zi-Szent-Benedek-PG-K%C3%A9t-Tan%C3%ADt%C3%A1si-Nyelv%C5%B1-Technikum-%C3%A9s-Koll/100032786691974/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCsHOTZXcaLiIPJ_sXhJW0zA" target="_blank" class="fa fa-youtube"></a>
+                <a href="https://www.instagram.com/pg_kiskunfelegyhaza/" target="_blank" class="fa fa-instagram"></a>
+              </p>
+         <p style="text-align: center; color: beige; bottom:0px; right:50%; position: absolute; margin: auto;padding: 50px 0px 15px 0px;"> &copy; 2023 PG</p>
+      </div>
+      </footer>
