@@ -8,6 +8,17 @@ function myFunction() {
 }
 
 
+//MÁSIK
+function myFunction1() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+
 //lehet nem kell
 
 function openGallery(id) {
