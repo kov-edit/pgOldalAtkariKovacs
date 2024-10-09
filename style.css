@@ -173,6 +173,11 @@ text-align: center;
   display: inline-block;
 }
 
+.datum{
+  color: gray;
+  font-size: small;
+}
+
 .align-right {
   text-align: right;
 }
@@ -201,24 +206,26 @@ footer {
 }
 
 #footerdiv {
-  display: flexbox;
-  align-items: center;
+  width: 100%;
   color: beige;
+  margin: auto;
+  text-align: center;
 }
 
 #uldiv{
-  
-  float: left;
-  padding-left: 80px;
-  margin-left: 50px
+  width: 40%;
+  vertical-align: top;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #pdiv {
-  float: right;
-  margin-right: 50px;
-  margin-top: 40px;
-  padding-right: 15%;
-  margin-bottom: 60px;
+  width: 40%;
+  vertical-align: top;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #pdiv i{
@@ -254,7 +261,7 @@ footer {
   border-radius: 80%;
   border: transparent;
   text-decoration: none;
-  color: #c1a35c;
+  color: #570b0b;
 }
 
 #uldiv a:hover {
