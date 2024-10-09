@@ -139,15 +139,22 @@
 
 
     .kep_gombok {
-      background-color: #B78C0A;
+      background-color: #710900;
       width: 100px;
-      height: 35px;
+      height: 40px;
       border-radius: 5px;
-      font-size: large;
+      border: none;
+      font-size: 20pt;
+      color: #bbb;
     }
 
     .kep_gombok:hover {
       cursor: pointer;
+      width: 120px;
+      height: 50px;
+      -webkit-box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
+-moz-box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
+box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
     }
 
     .gombok_div {
@@ -156,16 +163,20 @@
     }
 
     .algombok {
-      background-color: #011A76;
-      color: aliceblue;
-      width: 100px;
-      height: 35px;
+      background-color: #bb8e07;
+      color: white;
+      width: 140px;
+      height: 40px;
       border-radius: 5px;
-
+      font-size: 14pt;
+      border: none;
     }
 
     .algombok:hover {
       cursor: pointer;
+      border: 2px solid #775a02;
+      width: 145px;
+      height: 43px;
     }
 
     .cimek{
@@ -211,6 +222,7 @@
       <button onclick="F2021()" class="kep_gombok">2021</button>
       <button onclick="F2020()" class="kep_gombok">2020</button>
       <button onclick="F2019()" class="kep_gombok">2019</button>
+      <button onclick="videok()" class="kep_gombok">Videók</button>
     </div>
 
     <p style="text-align: center; font-size: large; font-weight: bold;">A fenti gombok segítségével megjelenik az adott év galériája, amit ugyan azon gombbal lehet bezárni is.</p>
