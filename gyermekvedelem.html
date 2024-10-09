@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG oldal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div id="fejlecdiv">
+        <div id="logo" style=" height: auto"><!--230px--> 
+          <img src="pglogo.png" alt="" width="200px" style="padding-top: 30px;">
+        </div>
+        
+        <div id="pg" style=" height: auto" ><!--230px--> 
+          <p >KISKUNFÉLEGYHÁZI SZENT BENEDEK PG KÉT TANÍTÁSI NYELVŰ TECHNIKUM ÉS KOLLÉGIUM</p>
+        </div>
+        
+
+    </div>
+
+    <div class="topnav" id="myTopnav">
+
+        <a href="index.html" class="active">Főoldal</a>
+        <a href="elerhetosegek.html">Elérhetőségek</a>
+        <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
+        <a href="dokumentumok.html" class="split">Dokumentumok</a>     
+        <a href="gyermekvedelem.html" class="split">Gyermekvédelem</a>       
+        <a href="" class="split">Büszkeségeink</a>               
+        <a href="galeriadetenyleg.html" class="split">Galéria</a>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+          <i class="fa fa-bars"></i> 
+        </a>
+    </div>
+
+    
+    <div class="urlap" >
+        <p>Elolvastam és elfogadom az adatkezelési tájékoztatóban foglaltakat <input type="checkbox" name="negyzet"></p>
+        <form action="" name="urlap" onsubmit="ellenor();">
+            <p><label for="">Név: </label><input type="text" name="nev"></p>
+            <p><label for="">Osztály:</label> <input type="text" name="osztaly"></p>
+            <p><label for="">Telefon: </label><input type="text" name="tel"></p>
+            <p><label for="">Email: </label><input type="text" name="mail" style="margin-bottom: 10px;"></p>
+
+            <p><label for="">Bejelentés szövege: </label> <textarea name="szoveg" id="" style="max-height: 100px; min-height: 20px; height: 30px; padding-top: 10px; max-width: 300px; min-width: 150px;"></textarea></p>
+            
+            <input class="gombocskak" type="submit" value="Ellküld">
+            <input class="gombocskak" type="reset" value="Töröl">
+
+        </form>
+
+
+    </div>
+    
+        <script>
+    
+            function vissza(){
+                let t = document.getElementById('szo').value;
+                let s = Array.from(t).reverse().join('');
+    
+                document.getElementById('vissza').innerText = s;
+    
+            }
+    
+    
+            function kiir(){
+                let e = document.getElementById('range').value;
+                document.getElementById('ertek').innerText = e;
+            }
+    
+    
+            function telefonEllenor(s){
+                error = "";
+                let newstring =s.replace( /[\+\(\)\.\-\ ]/g, '');  //kiszedi ezeket a jeleket ( '(',')', '.', '-' )
+                let filter = /^\d+$/; //számok legyenek benne
+                if (!filter.test(newstring)){
+                    error = "Kérem adjon meg érvényes telefonszámot!\n"
+                }
+                return error;
+            }
+    
+    
+            function emailELlenor(s){
+                error = "";
+                let filter = /^.+@.+\..{2,6}$/;
+                if (!filter.test(s)){
+                    error = "Kérem adjon meg érvényes email címet!\n"
+                }
+                return error;
+            }
+    
+    
+            function ellenor(){
+                let tel = document.forms['urlap']['tel'].value;
+                let mail = document.forms['urlap']['mail'].value;
+                if (telefonEllenor(tel)){
+                    alert(error);
+                }
+                else if (emailELlenor(mail)){
+                    alert(error);
+                }
+    
+            }
+        </script>    
+        
+
+
+
+
+ 
+
+      
+      
+  
+
+
+
+
+    <footer>
+      <div id="footerdiv">
+        <div id="uldiv">
+            <ul id="lablec">  
+                <a href="https://pg150.hu/gdpr.html" target="_blank"><li>Adatkezelési tájékoztató</li></a>
+            </ul>
+        </div>
+        <div id="pdiv">
+            <p>
+              <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
+              <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
+              <a href="https://www.facebook.com/people/Kiskunf%C3%A9legyh%C3%A1zi-Szent-Benedek-PG-K%C3%A9t-Tan%C3%ADt%C3%A1si-Nyelv%C5%B1-Technikum-%C3%A9s-Koll/100032786691974/" target="_blank" class="fa fa-facebook"></a>
+              <a href="https://www.youtube.com/channel/UCsHOTZXcaLiIPJ_sXhJW0zA" target="_blank" class="fa fa-youtube"></a>
+              <a href="https://www.instagram.com/pg_kiskunfelegyhaza/" target="_blank" class="fa fa-instagram"></a>
+            </p>
+            <p style="text-align: center; color: beige; bottom:0px; right:50%; position: absolute; margin: auto;padding: 50px 0px 15px 0px;"> &copy; 2024 PG</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+</body>
+</html>
