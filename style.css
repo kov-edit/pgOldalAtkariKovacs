@@ -125,7 +125,7 @@ text-align: center;
   width: 100%;
 
   padding-top: 20px;
-  border-bottom: 20px solid #B78C0A;
+  
 }
 
 #keplinkek :hover{
@@ -200,9 +200,11 @@ text-align: center;
 /*lábléc beállításai*/
 
 footer {
+  border-top: 20px solid #B78C0A;
   background: #011A76;
   position: absolute;
   width: 100%;
+
 }
 
 #footerdiv {

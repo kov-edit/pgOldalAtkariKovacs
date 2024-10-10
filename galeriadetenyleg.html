@@ -9,12 +9,14 @@
   <script src="script.js"></script>
 
   <style>
+    footer {
+      margin-top: 80px;
+    }
+
     .fodiv{
       background-color: #fff;
       margin: auto;
       width: 100%;
-      padding-top: 20px;
-      border-bottom: 20px solid #B78C0A;
     }
 
     /* The grid: Four equal columns that floats next to each other */
@@ -156,8 +158,6 @@
     .gombok_div {
       text-align: center;
       padding-bottom: 30px;
-      min-height: 150px;
-
     }
 
     .algombok {
@@ -168,7 +168,7 @@
       border-radius: 5px;
       font-size: 14pt;
       border: none;
- 
+
     }
 
     .algombok:hover {
@@ -178,8 +178,9 @@
 
     .cimek{
       text-align: center;
-      font-size: large;
+      font-size: 26px;
       font-weight: bold;
+      padding-top: 60px;
     }
   </style>
 </head>
@@ -212,6 +213,7 @@
 
 
   <div class="fodiv">
+    <p style="font-size: 30pt; font-weight: bold; text-align: center; padding-bottom: 30px;">Galéria</p>
     <div class="gombok_div">
       <button onclick="F2024()" class="kep_gombok">2024</button>
       <button onclick="F2023()" class="kep_gombok">2023</button>
@@ -222,7 +224,7 @@
       <button onclick="videok()" class="kep_gombok">Videók</button>
     </div>
 
-    <p style="text-align: center; font-size: large; font-weight: bold;">A fenti gombok segítségével megjelenik az adott év galériája, amit ugyan azon gombbal lehet bezárni is.</p>
+    <p style="text-align: center; font-size: large; font-weight: bold; padding-bottom: 30px;">A fenti gombok segítségével megjelenik az adott év galériája, amit ugyan azon gombbal lehet bezárni is.</p>
 
     <div id="2024" style="display: none;" class="kep_div">
 
@@ -256,6 +258,20 @@
           <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
         </div>
       </div>
+      <div class="row">
+        <div class="column">
+          <img src="image.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image1.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+        </div>
+      </div>
 
       <p id="ballagas" class="cimek">Ballagás</p>
 
@@ -265,6 +281,20 @@
         </div>
         <div class="column">
           <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="image.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image1.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
         </div>
         <div class="column">
           <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
@@ -299,6 +329,20 @@
           </div>
           <div class="column">
             <img src="image1.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="image.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image1.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
           </div>
           <div class="column">
             <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
