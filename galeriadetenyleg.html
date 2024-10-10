@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG oldal - Galéria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <style>
+    .fodiv{
+      background-color: #fff;
+      margin: auto;
+      width: 100%;
+      padding-top: 20px;
+      border-bottom: 20px solid #B78C0A;
+    }
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .column img:hover {
+      opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* The expanding image container */
+    .imgcontainer {
+      position: relative;
+      display: none;
+    }
+
+    /* Closable button inside the expanded image */
+    .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover,
+    .closebtn:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    /* Add Animation */
+    .modal-content {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /*reszponzív*/
+    @media only screen and (max-width: 700px) {
+      .column {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .row{
+        width: 100%;
+      }
+    }
+
+
+    .kep_gombok {
+      background-color: #710900;
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      font-size: 20pt;
+      color: #bbb;
+    }
+
+    .kep_gombok:hover {
+      cursor: pointer;
+      width: 120px;
+      height: 50px;
+      -webkit-box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
+-moz-box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
+box-shadow: 9px 7px 8px 0px rgba(117,116,111,0.55);
+    }
+
+    .gombok_div {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .algombok {
+      background-color: #bb8e07;
+      color: white;
+      width: 140px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 14pt;
+      border: none;
+    }
+
+    .algombok:hover {
+      cursor: pointer;
+      border: 2px solid #775a02;
+      width: 145px;
+      height: 43px;
+    }
+
+    .cimek{
+      text-align: center;
+      font-size: large;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="fejlecdiv">
+    <div id="logo" style=" height: auto"><!--230px--> 
+      <img src="pglogo.png" alt="" width="200px" style="padding-top: 30px;">
+    </div>
+    
+    <div id="pg" style=" height: auto" ><!--230px--> 
+      <p >KISKUNFÉLEGYHÁZI SZENT BENEDEK PG KÉT TANÍTÁSI NYELVŰ TECHNIKUM ÉS KOLLÉGIUM</p>
+    </div>
+    
+
+</div>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Főoldal</a>
+    <a href="elerhetosegek.html">Elérhetőségek</a>
+    <a href="munkatarsaink.html" class="split">Munkatársaink</a>     
+    <a href="" class="split">Dokumentumok</a>     
+    <a href="" class="split">Gyerekvédelem</a>       
+    <a href="" class="split">Büszkeségeink</a>               
+    <a href="galeriadetenyleg.html" class="split">Galéria</a>
+    <a href="javascript:void(0);" class="icon" onclick="hamburgermenu()">
+      <i class="fa fa-bars"></i> 
+    </a>
+  </div>
+
+
+
+  <div class="fodiv">
+    <div class="gombok_div">
+      <button onclick="F2024()" class="kep_gombok">2024</button>
+      <button onclick="F2023()" class="kep_gombok">2023</button>
+      <button onclick="F2022()" class="kep_gombok">2022</button>
+      <button onclick="F2021()" class="kep_gombok">2021</button>
+      <button onclick="F2020()" class="kep_gombok">2020</button>
+      <button onclick="F2019()" class="kep_gombok">2019</button>
+      <button onclick="videok()" class="kep_gombok">Videók</button>
+    </div>
+
+    <p style="text-align: center; font-size: large; font-weight: bold;">A fenti gombok segítségével megjelenik az adott év galériája, amit ugyan azon gombbal lehet bezárni is.</p>
+
+    <div id="2024" style="display: none;" class="kep_div">
+
+      <div class="gombok_div">
+        <a href="#evzaro"><button class="algombok">Évzáró</button></a>
+        <a href="#ballagas"><button class="algombok">Ballagás</button></a>
+        <a href="#gepesz"><button class="algombok">Gépész napok</button></a>
+        <a href="#nyilt_nap"><button class="algombok">Nyílt napok</button></a>
+        <a href="#evnyito"><button class="algombok">Évnyitó</button></a>    
+      </div>
+
+
+      <div id="myModal" class="modal">
+        <span class="closebtn" onclick="closeModal(event)">&times;</span>
+        <img class="modal-content" id="expandedImg">
+      </div>
+
+      <p id="evzaro" class="cimek">Évzáró</p>
+
+      <div class="row">
+        <div class="column">
+          <img src="image.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image1.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+        </div>
+      </div>
+
+      <p id="ballagas" class="cimek">Ballagás</p>
+
+      <div class="row">
+        <div class="column">
+          <img src="image3.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+        </div>
+      </div>
+
+      <p id="gepesz" class="cimek">Gépész napok</p>
+        <div class="row">
+          <div class="column">
+            <img src="image3.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image1.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img src="image.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image1.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+          </div>
+        </div>
+
+      <p id="nyilt_nap" class="cimek">Nyílt napok</p>
+        <div class="row">
+          <div class="column">
+            <img src="image3.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+          </div>
+        </div>
+
+      <p id="evnyito" class="cimek">Évnyitó</p>
+        <div class="row">
+          <div class="column">
+            <img src="image3.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+          </div>
+          <div class="column">
+            <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+          </div>
+        </div>
+
+    </div>
+
+
+    <div id="2023" style="display: none;" class="kep_div">
+      <div class="row">
+        <div class="column">
+          <img src="image3.jpg" alt="Nature" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Snow" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image2.jpg" alt="Mountains" style="width:100%" onclick="modalkepek(event);">
+        </div>
+        <div class="column">
+          <img src="image3.jpg" alt="Lights" style="width:100%" onclick="modalkepek(event);">
+        </div>
+      </div>
+    </div>
+
+
+    <div id="2022" style="display: none;" class="kep_div">
+            This is my DIV element. Click to hide.
+    </div>
+
+
+    <div id="2021" style="display: none;" class="kep_div">
+            This is my DIV element. Click to hide.
+    </div>
+
+
+    <div id="2020" style="display: none;" class="kep_div">
+            This is my DIV element. Click to hide.
+    </div>
+  </div>
+
+
+
+  <script>
+    function F2024() {
+      var x = document.getElementById("2024");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function F2023() {
+      var x = document.getElementById("2023");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function F2022() {
+      var x = document.getElementById("2022");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function F2021() {
+      var x = document.getElementById("2021");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function F2020() {
+      var x = document.getElementById("2020");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function modalkepek(event) {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      document.getElementById("expandedImg").setAttribute('src', event.target.getAttribute("src"));
+
+    }
+
+    function closeModal(event) {
+      const modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+
+  </script>
+
+<footer>
+  <div id="footerdiv">
+    <div id="uldiv">
+        <ul id="lablec">  
+            <a href="https://pg150.hu/gdpr.html" target="_blank"><li>Adatkezelési tájékoztató</li></a>
+        </ul>
+    </div>
+    <div id="pdiv">
+        <p>
+          <i class="fa fa-phone"> +36 76 462 332</i> <br> <!--vagy &#9743; ha a szín sötét-->
+          <i style="font-style: normal;">&#9993; titkarsag@szbi-pg.hu</i> <br>
+          <a href="https://www.facebook.com/people/Kiskunf%C3%A9legyh%C3%A1zi-Szent-Benedek-PG-K%C3%A9t-Tan%C3%ADt%C3%A1si-Nyelv%C5%B1-Technikum-%C3%A9s-Koll/100032786691974/" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://www.youtube.com/channel/UCsHOTZXcaLiIPJ_sXhJW0zA" target="_blank" class="fa fa-youtube"></a>
+          <a href="https://www.instagram.com/pg_kiskunfelegyhaza/" target="_blank" class="fa fa-instagram"></a>
+        </p>
+        <p style="text-align: center; color: beige; bottom:0px; right:50%; position: absolute; margin: auto;padding: 50px 0px 15px 0px;"> &copy; 2024 PG</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
